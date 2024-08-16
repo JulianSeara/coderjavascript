@@ -1,30 +1,30 @@
 // Define la variable nombre
-var nombre = "Julian";
+let nombre = "Julian";
 
 
 function calcularTotal(celdaId, cantidadId, resultadoId) {
-    var celda = document.getElementById(celdaId);
-    var cantidad = document.getElementById(cantidadId);
-    var resultado = document.getElementById(resultadoId);
+    let celda = document.getElementById(celdaId);
+    let cantidad = document.getElementById(cantidadId);
+    let resultado = document.getElementById(resultadoId);
 
     resultado.value = (parseFloat(celda.value) * parseFloat(cantidad.value)) || 0;
 }
 
 function actualizarCelda1() {
-    var tecnologia = document.getElementById('tecnologia').value.toLowerCase();
-    var celda1 = document.getElementById('celda1');
-    var celda3 = document.getElementById('celda3');
-    var celda31 = document.getElementById('celda31');/*Nuevo*/
-    var celda7 = document.getElementById('celda7');
-    var celda71 = document.getElementById('celda71');
-    var celda9 = document.getElementById('celda9');
-    var celda91 = document.getElementById('celda91');/*Nuevo*/
-    var celda92 = document.getElementById('celda92');/*Nuevo*/
-    var celda11 = document.getElementById('celda11');
-    var celda13 = document.getElementById('celda13');
-    var celda15 = document.getElementById('celda15');
-    var celda171 = document.getElementById('celda171');
-    var celda17 = document.getElementById('celda17');
+    let tecnologia = document.getElementById('tecnologia').value.toLowerCase();
+    let celda1 = document.getElementById('celda1');
+    let celda3 = document.getElementById('celda3');
+    let celda31 = document.getElementById('celda31');/*Nuevo*/
+    let celda7 = document.getElementById('celda7');
+    let celda71 = document.getElementById('celda71');
+    let celda9 = document.getElementById('celda9');
+    let celda91 = document.getElementById('celda91');/*Nuevo*/
+    let celda92 = document.getElementById('celda92');/*Nuevo*/
+    let celda11 = document.getElementById('celda11');
+    let celda13 = document.getElementById('celda13');
+    let celda15 = document.getElementById('celda15');
+    let celda171 = document.getElementById('celda171');
+    let celda17 = document.getElementById('celda17');
     // Establece el valor en la celda1 en función de la tecnología seleccionada
     if (tecnologia === 'advanced') {
       
@@ -130,7 +130,7 @@ function buscar_datos()
 doc = $("#doc").val();
 
 
-var parametros = 
+let parametros = 
 {
   "buscar": "1",
   "doc" : doc
@@ -170,11 +170,11 @@ $('input[type="text"]').on('input', function() {
 });
 
 function calcularTotales() {
-  var totalCantidadAccesos = 0;
-  var totalFeeMensual = 0;
+  let totalCantidadAccesos = 0;
+  let totalFeeMensual = 0;
 
   $('input[id^="celda"], input[id^="resultado"]').each(function() {
-    var valor = parseFloat($(this).val()) || 0;
+    let valor = parseFloat($(this).val()) || 0;
 
     if ($(this).attr('id').includes('celda2') || $(this).attr('id').includes('celda4') || $(this).attr('id').includes('celda8') || $(this).attr('id').includes('celda81') || $(this).attr('id').includes('celda10') || $(this).attr('id').includes('celda12') || $(this).attr('id').includes('celda14') || $(this).attr('id').includes('celda16') || $(this).attr('id').includes('celda181') || $(this).attr('id').includes('celda18')) {
       totalCantidadAccesos += valor;
@@ -193,9 +193,9 @@ function calcularTotales() {
 <script>
 //formula multiplicacion conceptos y accesos//
 function calcularTotal(idCelda1, idCelda2, idResultado) {
-    var valorCelda1 = parseFloat(document.getElementById(idCelda1).value) || 0;
-    var valorCelda2 = parseFloat(document.getElementById(idCelda2).value) || 0;
-    var resultado = valorCelda1 * valorCelda2;
+    let valorCelda1 = parseFloat(document.getElementById(idCelda1).value) || 0;
+    let valorCelda2 = parseFloat(document.getElementById(idCelda2).value) || 0;
+    let resultado = valorCelda1 * valorCelda2;
     document.getElementById(idResultado).value = resultado.toFixed(0);
 }
 
