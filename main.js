@@ -121,48 +121,7 @@ if (tecnologia === 'seleccionar') {
     // Llama a la función para calcular el total
     calcularTotal('celda1', 'celda2', 'resultado1');
 }
-</script>
-<script> 
-// Modifica la función buscar_datos() en tu script
 
-function buscar_datos()
-{
-doc = $("#doc").val();
-
-
-let parametros = 
-{
-  "buscar": "1",
-  "doc" : doc
-  
-};
-$.ajax(
-{
-  data:  parametros,
-  dataType: 'json',
-  url:   'codigos_php.php',
-  type:  'post',
- beforeSend: function() 
- {alert("enviando");}, 
-  error: function()
-{alert("Error");},
-  complete: function() 
- {alert("¡Listo!");},
-  success:  function (valores) 
-  {
-
-    $("#nombre").val(valores.nombre);
-    $("#dir").val(valores.direccion);
-    $("#tel").val(valores.telefono);
-
-
-}
-}) 
-}
-
-
-</script>
-<script>
 // Lógica para calcular la suma de la columna Fee mensual y cantidad de accesos
 $(document).ready(function() {
 $('input[type="text"]').on('input', function() {
@@ -189,8 +148,7 @@ function calcularTotales() {
   $('#totalFeeMensual').text('$' + totalFeeMensual.toFixed(0));
 }
 });
-</script>
-<script>
+
 //formula multiplicacion conceptos y accesos//
 function calcularTotal(idCelda1, idCelda2, idResultado) {
     let valorCelda1 = parseFloat(document.getElementById(idCelda1).value) || 0;
@@ -198,9 +156,3 @@ function calcularTotal(idCelda1, idCelda2, idResultado) {
     let resultado = valorCelda1 * valorCelda2;
     document.getElementById(idResultado).value = resultado.toFixed(0);
 }
-
-</script>
-
-</section>
-
-<!-- Aquí finalizan los Script Formulas-->
